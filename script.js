@@ -1,6 +1,5 @@
-// Replace this with the WhatsApp number in international format, digits only.
-// Example: "5511999999999".
-const WHATSAPP_PHONE = "";
+
+const WHATSAPP_PHONE = "4799766769";
 
 // Replace these sample entries with your real products and image paths.
 const products = [
@@ -10,6 +9,7 @@ const products = [
     category: "Coleção",
     description: "Adicione aqui uma descrição curta para este produto.",
     price: 49.9,
+    image: "images/alfabeto.jpeg",
   },
   {
     id: 2,
@@ -17,6 +17,7 @@ const products = [
     category: "Novidades",
     description: "Conte o que torna este item especial para seus clientes.",
     price: 79.9,
+    image: "images/mapa.jpeg",
   },
   {
     id: 3,
@@ -24,6 +25,7 @@ const products = [
     category: "Coleção",
     description: "Troque este texto por detalhes sobre o produto.",
     price: 99.9,
+    image: "images/numeros.jpeg",
   },
 ];
 
@@ -57,9 +59,14 @@ function createProductCard(product) {
   card.className = "product-card";
 
   const visual = document.createElement("div");
-  visual.className = "product-visual";
-  visual.setAttribute("aria-hidden", "true");
-  visual.textContent = String(product.id).padStart(2, "0");
+visual.className = "product-visual";
+
+const image = document.createElement("img");
+image.src = product.image;
+image.alt = product.name;
+image.loading = "lazy";
+
+visual.appendChild(image);
 
   const info = document.createElement("div");
   info.className = "product-info";
