@@ -2,14 +2,16 @@
 
 :root {
   color-scheme: light;
-  --ink: #20251f;
-  --muted: #747b70;
-  --paper: #f8f7f3;
-  --surface: #fffefa;
-  --green: #526b4f;
-  --green-dark: #354a36;
-  --lime: #dce8a7;
-  --line: #e6e6dc;
+  --ink: #29445A;
+  --muted: #6B7C85;
+  --paper: #FFFCF5;
+  --surface: #FFFFFF;
+  --green: #B9DDF2;
+  --green-dark: #29445A;
+  --lime: #FFE49A;
+  --peach: #FFC9B9;
+  --mint: #D4EAD8;
+  --line: #E6EEF3;
   --serif: "Manrope", "Segoe UI", sans-serif;
   --sans: "DM Sans", "Segoe UI", sans-serif;
 }
@@ -94,7 +96,7 @@ a {
   justify-content: center;
   padding: 72px max(12vw, 28px);
   background: var(--green-dark);
-  color: #fffefa;
+  color: var(--green-dark);
 }
 
 .hero > :not(.hero-orbit) {
@@ -152,7 +154,7 @@ h2 {
 .hero-copy {
   max-width: 400px;
   margin: 20px 0 27px;
-  color: #e2e5dc;
+  color: var(--muted);
   font-size: 15px;
   line-height: 1.7;
 }
@@ -302,7 +304,7 @@ h2 {
   place-items: center;
   background:
     radial-gradient(circle at 68% 32%, rgb(255 255 255 / 55%) 0 8%, transparent 8.5%),
-    linear-gradient(135deg, #e7ebd9, #d2ddc4);
+    linear-gradient(135deg, #EAF6FB, #D1EAF6);
   color: var(--green-dark);
   font-family: var(--serif);
   font-size: 52px;
@@ -312,13 +314,13 @@ h2 {
 .product-card:nth-child(3n + 2) .product-visual {
   background:
     radial-gradient(circle at 30% 70%, rgb(255 255 255 / 50%) 0 10%, transparent 10.5%),
-    linear-gradient(135deg, #eadfcd, #d9c9ae);
+    linear-gradient(135deg, #FFF1E9, #FFD7CF);
 }
 
 .product-card:nth-child(3n) .product-visual {
   background:
     radial-gradient(circle at 70% 25%, rgb(255 255 255 / 45%) 0 7%, transparent 7.5%),
-    linear-gradient(135deg, #d8e3df, #bdd0c6);
+    linear-gradient(135deg, #EEF9F3, #D4EAD8);
 }
 
 .product-info {
@@ -387,7 +389,7 @@ a:focus-visible,
 button:focus-visible,
 input:focus-visible,
 select:focus-visible {
-  outline: 3px solid #8da77e;
+  outline: 3px solid var(--lime);
   outline-offset: 3px;
 }
 
@@ -405,7 +407,7 @@ select:focus-visible {
   margin-bottom: 70px;
   padding: 35px 38px;
   border-radius: 7px;
-  background: #e9eddf;
+  background: var(--mint);
 }
 
 .contact-banner h2 {
