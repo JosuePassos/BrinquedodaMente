@@ -128,7 +128,7 @@ function orderProduct(productId) {
     return;
   }
 
-  const message = `Olá! Tenho interesse em ${product.name} (${formatPrice(product.price)}).`;
+  const message = `Olá! Tenho interesse neste produto: ${product.name} (${formatPrice(product.price)}).`;
   const whatsappUrl = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
   window.open(whatsappUrl, "_blank", "noopener,noreferrer");
   orderStatus.textContent = `Pedido de ${product.name} aberto no WhatsApp.`;
