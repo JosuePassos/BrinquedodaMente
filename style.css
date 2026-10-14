@@ -2,16 +2,18 @@
 
 :root {
   color-scheme: light;
-  --ink: #29445A;
-  --muted: #6B7C85;
-  --paper: #FFFCF5;
-  --surface: #FFFFFF;
-  --green: #B9DDF2;
-  --green-dark: #29445A;
-  --lime: #FFE49A;
-  --peach: #FFC9B9;
-  --mint: #D4EAD8;
-  --line: #E6EEF3;
+  --ink: #29445a;
+  --muted: #5d7081;
+  --paper: #fffdf8;
+  --surface: #fffdf8;
+  --primary: #b9ddf2;
+  --primary-dark: #29445a;
+  --primary-soft: #dfeef9;
+  --accent: #ffe49a;
+  --accent-strong: #ffce68;
+  --peach: #ffc9b9;
+  --mint: #d4ead8;
+  --line: #e7edf2;
   --serif: "Manrope", "Segoe UI", sans-serif;
   --sans: "DM Sans", "Segoe UI", sans-serif;
 }
@@ -46,7 +48,7 @@ a {
 }
 
 .site-header {
-  background: var(--paper);
+  background: linear-gradient(180deg, var(--paper) 0%, #f7fbff 100%);
 }
 
 .brand {
@@ -65,13 +67,14 @@ a {
   height: 31px;
   place-items: center;
   border-radius: 10px 10px 10px 3px;
-  background: var(--green);
-  color: white;
+  background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+  color: var(--ink);
   font-size: 16px;
+  box-shadow: 0 8px 16px rgb(185 221 242 / 35%);
 }
 
 .brand-light {
-  color: var(--green);
+  color: var(--primary-dark);
 }
 
 .header-link,
@@ -83,7 +86,7 @@ a {
 
 .header-link span {
   margin-left: 8px;
-  color: var(--green);
+  color: var(--primary-dark);
 }
 
 .hero {
@@ -95,8 +98,11 @@ a {
   align-items: flex-start;
   justify-content: center;
   padding: 72px max(12vw, 28px);
-  background: var(--green-dark);
-  color: var(--green-dark);
+  background:
+    radial-gradient(circle at 12% 20%, rgb(255 255 255 / 52%) 0 10%, transparent 10.5%),
+    radial-gradient(circle at 85% 18%, rgb(255 228 154 / 58%) 0 13%, transparent 13.5%),
+    linear-gradient(135deg, var(--primary) 0%, #cfe7f8 48%, #c9e1f1 100%);
+  color: var(--ink);
 }
 
 .hero > :not(.hero-orbit) {
@@ -106,7 +112,7 @@ a {
 
 .eyebrow {
   margin: 0 0 13px;
-  color: var(--green);
+  color: var(--primary-dark);
   font-size: 11px;
   font-weight: 700;
   letter-spacing: 1.5px;
@@ -117,14 +123,15 @@ a {
   display: flex;
   align-items: center;
   gap: 9px;
-  color: var(--lime);
+  color: var(--primary-dark);
 }
 
 .eyebrow-dot {
   width: 7px;
   height: 7px;
   border-radius: 50%;
-  background: var(--lime);
+  background: var(--accent-strong);
+  box-shadow: 0 0 0 4px rgb(255 206 104 / 28%);
 }
 
 h1,
@@ -148,13 +155,13 @@ h2 {
 }
 
 .hero h1 span {
-  color: var(--lime);
+  color: var(--primary-dark);
 }
 
 .hero-copy {
   max-width: 400px;
   margin: 20px 0 27px;
-  color: var(--muted);
+  color: rgb(41 68 90 / 86%);
   font-size: 15px;
   line-height: 1.7;
 }
@@ -165,8 +172,9 @@ h2 {
   gap: 11px;
   padding: 12px 17px;
   border-radius: 5px;
-  background: var(--lime);
-  color: var(--green-dark);
+  background: linear-gradient(135deg, var(--accent) 0%, var(--accent-strong) 100%);
+  color: var(--primary-dark);
+  box-shadow: 0 12px 22px rgb(255 206 104 / 32%);
 }
 
 .hero-link span {
@@ -177,7 +185,7 @@ h2 {
   position: absolute;
   width: 330px;
   height: 330px;
-  border: 1px solid rgb(220 232 167 / 17%);
+  border: 1px solid rgb(41 68 90 / 18%);
   border-radius: 50%;
 }
 
@@ -238,7 +246,7 @@ h2 {
   align-items: center;
   border: 1px solid var(--line);
   border-radius: 5px;
-  background: var(--surface);
+  background: linear-gradient(180deg, #fffdf8 0%, #f7fbff 100%);
 }
 
 .search-field {
@@ -247,7 +255,7 @@ h2 {
 }
 
 .search-icon {
-  color: var(--green);
+  color: var(--primary-dark);
   font-size: 25px;
   line-height: 1;
 }
@@ -273,8 +281,8 @@ h2 {
 
 .search-field:focus-within,
 .filter-field:focus-within {
-  border-color: var(--green);
-  box-shadow: 0 0 0 3px rgb(82 107 79 / 12%);
+  border-color: var(--primary-dark);
+  box-shadow: 0 0 0 3px rgb(185 221 242 / 80%);
 }
 
 .product-grid {
@@ -290,7 +298,7 @@ h2 {
   overflow: hidden;
   border: 1px solid var(--line);
   border-radius: 7px;
-  background: var(--surface);
+  background: linear-gradient(180deg, #fffdf8 0%, #f7fbff 100%);
   height: 100%;
 }
 
@@ -303,9 +311,9 @@ h2 {
   min-height: 205px;
   place-items: center;
   background:
-    radial-gradient(circle at 68% 32%, rgb(255 255 255 / 55%) 0 8%, transparent 8.5%),
-    linear-gradient(135deg, #EAF6FB, #D1EAF6);
-  color: var(--green-dark);
+    radial-gradient(circle at 68% 32%, rgb(255 255 255 / 60%) 0 8%, transparent 8.5%),
+    linear-gradient(135deg, #dff2ff, #b9ddf2);
+  color: var(--ink);
   font-family: var(--serif);
   font-size: 52px;
   font-weight: 600;
@@ -313,14 +321,14 @@ h2 {
 
 .product-card:nth-child(3n + 2) .product-visual {
   background:
-    radial-gradient(circle at 30% 70%, rgb(255 255 255 / 50%) 0 10%, transparent 10.5%),
-    linear-gradient(135deg, #FFF1E9, #FFD7CF);
+    radial-gradient(circle at 30% 70%, rgb(255 255 255 / 55%) 0 10%, transparent 10.5%),
+    linear-gradient(135deg, #fff2c9, #ffc9b9);
 }
 
 .product-card:nth-child(3n) .product-visual {
   background:
-    radial-gradient(circle at 70% 25%, rgb(255 255 255 / 45%) 0 7%, transparent 7.5%),
-    linear-gradient(135deg, #EEF9F3, #D4EAD8);
+    radial-gradient(circle at 70% 25%, rgb(255 255 255 / 50%) 0 7%, transparent 7.5%),
+    linear-gradient(135deg, #ebf8ee, #d4ead8);
 }
 
 .product-info {
@@ -332,7 +340,7 @@ h2 {
 
 .product-category {
   margin: 0 0 8px;
-  color: var(--green);
+  color: var(--primary-dark);
   font-size: 10px;
   font-weight: 700;
   letter-spacing: 1px;
@@ -372,16 +380,18 @@ h2 {
   padding: 0 12px;
   border: 0;
   border-radius: 4px;
-  background: var(--green);
-  color: white;
+  background: linear-gradient(135deg, var(--accent) 0%, var(--accent-strong) 100%);
+  color: var(--primary-dark);
   cursor: pointer;
   font: inherit;
   font-size: 11px;
   font-weight: 700;
+  box-shadow: 0 8px 16px rgb(255 206 104 / 26%);
 }
 
 .order-button:hover {
-  background: var(--green-dark);
+  background: linear-gradient(135deg, var(--accent-strong) 0%, var(--accent) 100%);
+  color: var(--primary-dark);
 }
 
 .order-button:focus-visible,
@@ -389,7 +399,7 @@ a:focus-visible,
 button:focus-visible,
 input:focus-visible,
 select:focus-visible {
-  outline: 3px solid var(--lime);
+  outline: 3px solid var(--primary-dark);
   outline-offset: 3px;
 }
 
@@ -407,7 +417,7 @@ select:focus-visible {
   margin-bottom: 70px;
   padding: 35px 38px;
   border-radius: 7px;
-  background: var(--mint);
+  background: linear-gradient(135deg, var(--mint) 0%, #edf9f2 100%);
 }
 
 .contact-banner h2 {
@@ -422,8 +432,8 @@ select:focus-visible {
   gap: 10px;
   padding: 13px 16px;
   border-radius: 4px;
-  background: var(--green);
-  color: white;
+  background: linear-gradient(135deg, var(--primary-dark) 0%, #385d7b 100%);
+  color: var(--paper);
 }
 
 .site-footer {
