@@ -1,33 +1,106 @@
-# FormaMente
+# BrinquedodaMente
 
-Catálogo estático e responsivo para apresentar produtos, filtrar itens e iniciar pedidos pelo WhatsApp. O projeto usa HTML, CSS e JavaScript puro, sem etapa de compilação.
+**Brincar, descobrir e aprender de novas formas.**
 
-## Estrutura
+A BrinquedodaMente é uma iniciativa de criação de materiais educativos produzidos por impressão 3D, desenvolvidos para tornar as atividades de aprendizagem mais práticas, interativas e acessíveis.
+
+Este projeto consiste em um catálogo digital para apresentar os produtos, divulgar os materiais e facilitar o contato entre clientes e a marca.
+
+## Sobre o projeto
+
+O site foi pensado para profissionais da educação e outras pessoas interessadas em materiais educativos que possam complementar atividades de aprendizagem.
+
+### Funcionalidades
+
+- **Catálogo de produtos:** fotos, descrições e preços dos materiais.
+- **Busca de produtos:** pesquisa por nome, categoria ou descrição.
+- **Filtros por categoria:** organização dos materiais para facilitar a navegação.
+- **Pedidos pelo WhatsApp:** contato direto para consultar e solicitar produtos.
+- **Layout responsivo:** adaptação para computadores, tablets e celulares.
+
+## Tecnologias utilizadas
+
+- HTML5 — estrutura do site.
+- CSS3 — identidade visual, layout e responsividade.
+- JavaScript — catálogo, pesquisa, filtros e integração com o WhatsApp.
+
+## Estrutura do projeto
 
 ```text
-FormaMente/
-├── index.html     # Estrutura da página e navegação
-├── style.css      # Cores, tipografia, layout e adaptação para celular
-├── script.js      # Produtos, filtros e pedidos pelo WhatsApp
-├── assets/        # Fotos, logo e outros arquivos visuais
-└── README.md      # Descrição e instruções do projeto
+BrinquedodaMente/
+├── index.html
+├── style.css
+├── script.js
+├── images/
+│   ├── alfabeto.jpeg
+│   ├── mapa.jpeg
+│   └── numeros.jpeg
+└── README.md
 ```
 
-## Executar localmente
+A pasta `images/` armazena as fotografias utilizadas no catálogo.
 
-Abra `index.html` no navegador. Para usar um servidor local, execute na pasta do projeto:
+## Como executar
 
-```sh
-python -m http.server 8000
+1. Abra a pasta do projeto no Visual Studio Code.
+2. Abra o arquivo `index.html` no navegador.
+
+Para facilitar o desenvolvimento, recomenda-se utilizar a extensão Live Server no VS Code.
+
+## Como adicionar produtos
+
+Os produtos são cadastrados no array `products`, dentro do arquivo `script.js`.
+
+Cada produto possui:
+
+- `id`: identificador.
+- `name`: nome do produto.
+- `category`: categoria.
+- `description`: descrição.
+- `price`: preço em reais.
+- `image`: caminho da fotografia.
+
+Exemplo:
+
+```javascript
+{
+  id: 1,
+  name: "Alfabeto móvel",
+  category: "Alfabetização",
+  description: "Material educativo para atividades de alfabetização.",
+  price: 49.90,
+  image: "images/alfabeto.jpeg"
+}
 ```
 
-Depois, acesse <http://localhost:8000>.
+Substitua os dados demonstrativos pelas informações reais dos produtos.
 
-## Personalizar
+## Configuração do WhatsApp
 
-- Em `script.js`, substitua os produtos de exemplo na lista `products` pelos seus itens. Cada produto tem `id`, `name`, `category`, `description` e `price`.
-- Defina `WHATSAPP_PHONE` com o número de atendimento no formato internacional, somente dígitos, incluindo o código do país e o DDD. Exemplo: `"5511999999999"`. O número está vazio de propósito até você configurá-lo.
-- Adicione fotos e o logotipo em `assets/` e atualize o HTML/CSS para usá-los.
-- Atualize nome, textos, cores e informações de contato conforme a identidade do projeto.
+No início do arquivo `script.js`, configure a constante `WHATSAPP_PHONE` com o número que receberá os pedidos.
 
-Os produtos e preços exibidos inicialmente são apenas exemplos; troque-os antes de divulgar o catálogo.
+Utilize o código do país, o DDD e o número, sem espaços ou símbolos.
+
+Exemplo de formato:
+
+```javascript
+const WHATSAPP_PHONE = "5547999999999";
+```
+
+Ao clicar no botão de um produto, o cliente será direcionado para uma conversa no WhatsApp. O site não realiza pagamentos nem armazena pedidos.
+
+## Próximas etapas
+
+- Adicionar fotos reais dos produtos.
+- Definir a identidade visual definitiva da marca.
+- Organizar o catálogo por categorias.
+- Publicar o site na internet.
+- Divulgar os materiais pelo Instagram e WhatsApp.
+
+## Objetivo
+
+Criar uma presença digital para a BrinquedodaMente, facilitando a divulgação dos materiais educativos e o contato com potenciais clientes.
+
+---
+
+**BrinquedodaMente — brincar também é aprender.**
