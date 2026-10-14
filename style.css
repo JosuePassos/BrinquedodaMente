@@ -2,14 +2,16 @@
 
 :root {
   color-scheme: light;
-  --ink: #20251f;
-  --muted: #747b70;
-  --paper: #f8f7f3;
-  --surface: #fffefa;
-  --green: #526b4f;
-  --green-dark: #354a36;
-  --lime: #dce8a7;
-  --line: #e6e6dc;
+  --ink: #29445a;
+  --muted: #52677a;
+  --paper: #fffcf5;
+  --surface: #fffcf5;
+  --primary: #b9ddf2;
+  --primary-dark: #29445a;
+  --accent: #ffe49a;
+  --peach: #ffc9b9;
+  --mint: #d4ead8;
+  --line: #d8e5e9;
   --serif: "Manrope", "Segoe UI", sans-serif;
   --sans: "DM Sans", "Segoe UI", sans-serif;
 }
@@ -63,13 +65,13 @@ a {
   height: 31px;
   place-items: center;
   border-radius: 10px 10px 10px 3px;
-  background: var(--green);
-  color: white;
+  background: var(--primary);
+  color: var(--ink);
   font-size: 16px;
 }
 
 .brand-light {
-  color: var(--green);
+  color: var(--primary-dark);
 }
 
 .header-link,
@@ -81,7 +83,7 @@ a {
 
 .header-link span {
   margin-left: 8px;
-  color: var(--green);
+  color: var(--primary-dark);
 }
 
 .hero {
@@ -93,8 +95,8 @@ a {
   align-items: flex-start;
   justify-content: center;
   padding: 72px max(12vw, 28px);
-  background: var(--green-dark);
-  color: #fffefa;
+  background: var(--primary);
+  color: var(--ink);
 }
 
 .hero > :not(.hero-orbit) {
@@ -104,7 +106,7 @@ a {
 
 .eyebrow {
   margin: 0 0 13px;
-  color: var(--green);
+  color: var(--primary-dark);
   font-size: 11px;
   font-weight: 700;
   letter-spacing: 1.5px;
@@ -115,14 +117,14 @@ a {
   display: flex;
   align-items: center;
   gap: 9px;
-  color: var(--lime);
+  color: var(--primary-dark);
 }
 
 .eyebrow-dot {
   width: 7px;
   height: 7px;
   border-radius: 50%;
-  background: var(--lime);
+  background: var(--accent);
 }
 
 h1,
@@ -146,13 +148,13 @@ h2 {
 }
 
 .hero h1 span {
-  color: var(--lime);
+  color: var(--ink);
 }
 
 .hero-copy {
   max-width: 400px;
   margin: 20px 0 27px;
-  color: #e2e5dc;
+  color: var(--ink);
   font-size: 15px;
   line-height: 1.7;
 }
@@ -163,8 +165,8 @@ h2 {
   gap: 11px;
   padding: 12px 17px;
   border-radius: 5px;
-  background: var(--lime);
-  color: var(--green-dark);
+  background: var(--primary-dark);
+  color: var(--paper);
 }
 
 .hero-link span {
@@ -175,7 +177,7 @@ h2 {
   position: absolute;
   width: 330px;
   height: 330px;
-  border: 1px solid rgb(220 232 167 / 17%);
+  border: 1px solid rgb(41 68 90 / 18%);
   border-radius: 50%;
 }
 
@@ -245,7 +247,7 @@ h2 {
 }
 
 .search-icon {
-  color: var(--green);
+  color: var(--primary-dark);
   font-size: 25px;
   line-height: 1;
 }
@@ -271,8 +273,8 @@ h2 {
 
 .search-field:focus-within,
 .filter-field:focus-within {
-  border-color: var(--green);
-  box-shadow: 0 0 0 3px rgb(82 107 79 / 12%);
+  border-color: var(--primary-dark);
+  box-shadow: 0 0 0 3px rgb(185 221 242 / 75%);
 }
 
 .product-grid {
@@ -302,8 +304,8 @@ h2 {
   place-items: center;
   background:
     radial-gradient(circle at 68% 32%, rgb(255 255 255 / 55%) 0 8%, transparent 8.5%),
-    linear-gradient(135deg, #e7ebd9, #d2ddc4);
-  color: var(--green-dark);
+    linear-gradient(135deg, #d7edfa, #b9ddf2);
+  color: var(--ink);
   font-family: var(--serif);
   font-size: 52px;
   font-weight: 600;
@@ -312,13 +314,13 @@ h2 {
 .product-card:nth-child(3n + 2) .product-visual {
   background:
     radial-gradient(circle at 30% 70%, rgb(255 255 255 / 50%) 0 10%, transparent 10.5%),
-    linear-gradient(135deg, #eadfcd, #d9c9ae);
+    linear-gradient(135deg, #fff1c6, #ffc9b9);
 }
 
 .product-card:nth-child(3n) .product-visual {
   background:
     radial-gradient(circle at 70% 25%, rgb(255 255 255 / 45%) 0 7%, transparent 7.5%),
-    linear-gradient(135deg, #d8e3df, #bdd0c6);
+    linear-gradient(135deg, #e6f3e8, #d4ead8);
 }
 
 .product-info {
@@ -330,7 +332,7 @@ h2 {
 
 .product-category {
   margin: 0 0 8px;
-  color: var(--green);
+  color: var(--primary-dark);
   font-size: 10px;
   font-weight: 700;
   letter-spacing: 1px;
@@ -370,8 +372,8 @@ h2 {
   padding: 0 12px;
   border: 0;
   border-radius: 4px;
-  background: var(--green);
-  color: white;
+  background: var(--primary);
+  color: var(--ink);
   cursor: pointer;
   font: inherit;
   font-size: 11px;
@@ -379,7 +381,8 @@ h2 {
 }
 
 .order-button:hover {
-  background: var(--green-dark);
+  background: var(--primary-dark);
+  color: var(--paper);
 }
 
 .order-button:focus-visible,
@@ -387,7 +390,7 @@ a:focus-visible,
 button:focus-visible,
 input:focus-visible,
 select:focus-visible {
-  outline: 3px solid #8da77e;
+  outline: 3px solid var(--primary-dark);
   outline-offset: 3px;
 }
 
@@ -405,7 +408,7 @@ select:focus-visible {
   margin-bottom: 70px;
   padding: 35px 38px;
   border-radius: 7px;
-  background: #e9eddf;
+  background: var(--mint);
 }
 
 .contact-banner h2 {
@@ -420,8 +423,8 @@ select:focus-visible {
   gap: 10px;
   padding: 13px 16px;
   border-radius: 4px;
-  background: var(--green);
-  color: white;
+  background: var(--primary-dark);
+  color: var(--paper);
 }
 
 .site-footer {
