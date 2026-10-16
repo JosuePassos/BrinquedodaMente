@@ -1,5 +1,5 @@
 
-const WHATSAPP_PHONE = "4799766769";
+const WHATSAPP_PHONE = "47999766769";
 
 // Replace these sample entries with your real products and image paths.
 const products = [

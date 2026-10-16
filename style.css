@@ -11,6 +11,7 @@
   --primary-soft: #dfeef9;
   --accent: #ffe49a;
   --accent-strong: #ffce68;
+  --accent-very-strong: #ffb347;
   --peach: #ffc9b9;
   --mint: #b9ddf2;
   --line: #e7edf2;
@@ -74,7 +75,7 @@ a {
 }
 
 .brand-light {
-  color: var(--primary-dark);
+  color: var(--accent-very-strong);
 }
 
 .header-link,
